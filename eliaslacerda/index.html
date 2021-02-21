@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0ed3cf">
+        <meta name="msapplication-TileColor" content="#0ed3cf">
+        <meta name="theme-color" content="#0ed3cf">
+        <meta property="og:image" content="https://tailwindcomponents.com/og-tailwindcomponents.png" />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="640" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:url" content="https://tailwindcomponents.com/search?page=2&amp;query=header" />
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@TwComponents" />
+        <meta name="twitter:title" content="" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:image" content="https://tailwindcomponents.com/og-tailwindcomponents.png" />
+        <meta name="google-site-verification" content="D4BL2NNYf_eEOMneiD3A61KMM4QiL_qas4wZfm84BVY" />
+        <title>Elias Lacerda</title>
+        <meta name="description" content="">
+        <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.main.css">
+        <script src="js/app.js" defer></script>
+    </head>
+    <body>
+        <div id="app" class="min-h-screen font-custom">
+            <div v-cloak :class="sidebarOpen ? 'translate-x-0 ease-out' : 'translate-x-full ease-in'" class="transition duration-300 transform fixed right-0 top-0 h-screen bg-gray-900 z-50 pt-6 w-64 sm:hidden">
+                <button @click="sidebarOpen = !sidebarOpen" title="tailwindcss" class="nav-toggle absolute pin-0 right-0 pr-6 focus:outline-none">
+                    <button @click="sidebarOpen = !sidebarOpen" title="tailwindcss" class="nav-toggle absolute pin-0 right-0 pr-6 focus:outline-none">
+                        <img alt="Tailwindcss components" src="./svg/close.svg" class="h-4">
+                    </button>
+                </button>
+                <nav class="relative flex-col items-center justify-end flex-1 mt-12 main-nav sm:flex sm:mt-0 sm:flex-row">
+                    <div class="relative flex flex-col items-center justify-end flex-1 sm:flex-row">
+                        <a title="Tailwind CSS" href="/" class="py-2 sm-4 sm:py-2 sm:px-4 text-white sm:text-gray-900 opacity-75 hover:opacity-100">Home</a>
+                        <div class="relative user">
+                            <a title="Tailwind css components" href="/components" class="block py-2 sm:py-4 sm:px-4 text-white sm:text-gray-900 opacity-75 hover:opacity-100">Components</a>
+                            <div class="absolute left-0 hidden opacity-0 pointer-events-none sm:block dropdown">
+                                <div class="flex flex-col bg-white border border-gray-200 rounded shadow-lg">
+                                    <a title="TailwindCSS Buttons" href="/components/Buttons" class="w-full px-6 py-2 text-sm opacity-75 text-gray-900 hover:opacity-100 whitespace-nowrap">Buttons</a>
+                                    <a title="TailwindCSS Forms" href="/components/Forms" class="w-full px-6 py-2 text-sm opacity-75 text-gray-900 hover:opacity-100 whitespace-nowrap">Forms</a>
+                                    <a title="TailwindCSS Navigations" href="/components/Navigations" class="w-full px-6 py-2 text-sm opacity-75 text-gray-900 hover:opacity-100 whitespace-nowrap">Navigations</a>
+                                    <a title="TailwindCSS Cards" href="/components/Cards" class="w-full px-6 py-2 text-sm opacity-75 text-gray-900 hover:opacity-100 whitespace-nowrap">Cards</a>
+                                    <a title="TailwindCSS Widget" href="/components/Widget" class="w-full px-6 py-2 text-sm opacity-75 text-gray-900 hover:opacity-100 whitespace-nowrap">Widget</a>
+                                    <a title="TailwindCSS Tables" href="/components/Tables" class="w-full px-6 py-2 text-sm opacity-75 text-gray-900 hover:opacity-100 whitespace-nowrap">Tables</a>
+                                    <a title="TailwindCSS Pages" href="/components/Pages" class="w-full px-6 py-2 text-sm opacity-75 text-gray-900 hover:opacity-100 whitespace-nowrap">Pages</a>
+                                    <a title="TailwindCSS Alpinejs" href="/components/Alpinejs" class="w-full px-6 py-2 text-sm opacity-75 text-gray-900 hover:opacity-100 whitespace-nowrap">Alpinejs</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a title="Tailwind css premium components" href="/premium" class="py-2 sm:py-4 sm:px-4 text-white sm:text-gray-900 opacity-75 hover:opacity-100">Premium</a>
+                        <a title="Tailwind components blog" href="/blog" class="py-2 sm:py-4 sm:px-4 text-white sm:text-gray-900 opacity-75 hover:opacity-100">Blog</a>
+                        <button v-cloak @click="searchOpen = !searchOpen" class="py-2 sm:py-4 sm:px-4 text-white sm:text-gray-900 focus:outline-none hidden lg:block">
+                            <svg :class="searchOpen ? 'hidden' : ''" class="w-4 h-4 opacity-75 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+                                <path d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z" fillRule="evenodd"></path>
+                            </svg>
+                            <svg v-cloak :class="searchOpen ? '' : 'hidden'" class="w-4 h-3 opacity-75 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 375">
+                                <defs/>
+                                <g ill-rule="nonzero">
+                                    <path d="M368.663 339.414L35.873 6.624c-8.076-8.076-21.172-8.076-29.249 0-8.076 8.077-8.076 21.173 0 29.25l332.79 332.79c8.078 8.076 21.172 8.076 29.25 0 8.076-8.078 8.076-21.172 0-29.25z"/>
+                                    <path d="M339.414 6.624L6.624 339.414c-8.076 8.077-8.077 21.172 0 29.25 8.078 8.076 21.173 8.076 29.25 0l332.79-332.79c8.076-8.078 8.076-21.172 0-29.25-8.078-8.077-21.172-8.077-29.25 0z"/>
+                                </g>
+                            </svg>
+                        </button>
+                        <form v-cloak :class="searchOpen ? '' : 'hidden'" class="absolute right-0 top-0 mt-2 mr-12 w-full " action="/search">
+                            <input type="search" name="query" class="w-full h-10 p-4 mr-4 text-sm text-gray-600 bg-white border border-gray-300 rounded focus:outline-none focus:border-gray-400 focus:ring-0" placeholder="Press enter to search" />
+                        </form>
+                    </div>
+                </nav>
+            </div>
+            <div class="min-h-screen flex flex-col">
+                <header class="top-0 lef-0 w-full z-40 bg-white fixed border-b border-gray-200">
+                    
+                    <div class="container mx-auto px-6 h-16 flex justify-between items-center">
+                        <a title="tailwindcss components" href="/">
+                            <!--Logo Elias Lacerda em SVG-->
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="250" height="32" viewBox="0 0 331 40">
+                                <image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUsAAAAoCAYAAAB3oNjeAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAAZRElEQVR42u2deXxU5bnHv2cmKwmQsJZNBIGiBlCpVasIsgkoq4hd9Lb2iqVXrfW2XrWKvCC2YkW0rSXtbatYeougiBSQfRGwVUFEI6JIZBHZt5CQZZI594/nnMxkMmebmWRC6O/zmc9s73LOe973eZ/91fg36hW9Z/fu+Nyw59qcLDv5NSADCGpoRan+1MP3LL3nxL6j+47wS6qSfZ2NDdpjmr99TvvWL9z8Qk5QD7bS0XOAVEAHKrJSs4p3n9x98t6l9xb58J2sUlVFyb7mf6NhQZu7be5t6z9ff1NqWmqFjq7F0EYKcAZ4Kn90/pfhf6RPTk+//fLbf5GRmtGjKli1KX90/guJuOi85/P63tTzpvtPl53Wgdn5o/P/FU97PuUbC9wKnAV+HVTBTxNxndWYQq6G9m3Npw0MVgWvopxO1B7pAOns1zTtI/2M/u7kEZMXPDHoiV1uu5j97uwrdxzc8eOKYIWm+bRgxN9mb8/kj87fkdB7i4K+v+t72ZDuQ+4/VXZKA0vC7wdOAdPyR+efqKtr0aZoAzRNuxaNbwaDwUsopyOySUUpTKUv3Xcc+AL4CCgI6sHNwPtMRQfwKd8NwA+BAEJo475EZA39PqiCMo8nkzP4osGP9m7Tu21poDSgu+9GA4JAKVDUNL3pgW1fbftidcHqXTzL524bmfTGpBbAL4A2xn167b8MONMsvdmxrQe27l/z8ZoDpLObX3EoAeNliTtfu/PBrLSsvMpgZQCIRss0ZINcmD86/3Wv7acs2bmk/7x18+4gm3gf/RygBrEspzz1zxv/fBc67dFozQP8nlnxT7CCgwU9CwoL7sAHwFtA7MRyCk2CenAakGf8chx4KN5rrIbiNuARXdf76EFdHpcs1UpkIqYiiyUV6KpreleqGB0IBLKAR912M69gXs8NBRvuJGC0Fh2vAXVOLLfu3zpp666tPzCejxO2IXMncVCkApOAsbquD9B1Xauedem2NVOCerAt0Ba4GgCNr4BBwE6AoB7sC9xeB8O2EXMe+2m6esfqSau3rc52OYbREQTSgKZ8yeNsw8dy4CUUZ+2q5a/Pbwb8F5AZ1x2F+q9AZzeT+RSNjfhYhKIwoaM3mZ4vbn7xaYJEJ5M10YsHWM4sSr10kdIss9kZcoEsAuhsBIqwW241oQNZwAngSO3WCZLDMaA9cDJhA5NJadhjPBtHS6BxNSFCCTAKhUJ5G8ioUEwDJhv96MBq4B/Ax8Z4BZDp1AK4AOgD9EfjCh091UtXuVm5Zdk52cHiymIffsti5XHfkxOm0gYYRhPXNcaSSGKpGAc8joylm4XjhNZATvU3Lc75Zo3w+VZFFkfJIjtBbXcEOqIzErgfxWQU8y1L51AFHEXmZCKQBlxsvMag83MUq4DfoXgvIT2kMJ7mrkv3AS4H3vbWBQjJ0ylG50fAbrxNMR+go6KIW4kQUqIhse2ONt6LgWygJzAAeDOuVhWPYxJKIY4PAqtQVNrU+itTSUfjxtSUVG+ETY94JQs61wKdPdS4BsWFKPbE1a+iCTADuIdEkMgQSvAmiiYGdfcMewCvoOiBYno9922iHfAfwG0ongOeRHEmrhZ1bvZYYwQxEUuBBpSjPC+3oIeyDQuK1sAE49tvgBuBvgi3EzuxVAwDphjftgHDURx2VXcK5cDi6c9Od1W8AWKsx/JtgOHA7Jh7VLQBXkE2uX/DHZ5AcRwVx7jHj3RE5XU9ittjFs0V12JKEu4xFsVTKIrdVojUiHgS/RoBRgFfQxTSLwGbqn9XdIipReFwJiNjewQY75pQnutQdEXG1CtGoVyrfiL7bA+s5NwnlPFoJ2PFkyguSvaNA9cA61D0irH+eKyMdta4BLjBS4VkPKCGhNuM93dR7CJELNsi3E4s6At8y/g8J+GK7IaNm8GD5iiEG4Cve64lG9McvHMVIPrbIsSgd9r4Hk1KikUorTTaq/T48oKdwKvAIuAN430lsMtDW7mIISwWBIEKREVRGfYeqxB/ATAPRVtPtRQ5xL5Wb/FSOLbdvDFAdrHrjG9LjPdNwCGE2xwD/CmGlq8M+7wy2bdZz7ATwd8FuiMLNBLpiArkY4/9zQAGeyi/G9gArAc+RYyOlYhE1RzoAPRCOJ0rkE0zF2860GLgJ8CHuN84UoDtHu99HjAt4tp8iDHlOuAR3HHb/VGkOOjSo+El4I+IxVzsFuIO1hy40Bi/KxAbgFtcAjwJ3OWhzjVYb7QHgMPGdUTDYBQtULhyXTt/iaXoKjMRa/oiABSHUCxBHtZAFJeiPC9g07hRhjys8wOKKwlx1NGwDPg20YkliA7pN64XrWIUcK/LqzsAzAT+guK0Tbn3CM2FHsBEYAje1FNlwD9R4mpUh9Cj2BeCCPFfiWI9sABntUhnxOjj1aVsJ4p3bEsoMhDp7UcIUXODH6CYj3LNaNht0J8gm5YVseyAcKV/c9PR+SmGK5oSsoKvMURwEwuM90xEF+IV6THUaQwYh3A10VCCiIp7bOp/i5pcuTUUzRCuyg3WATegmOVAKCP7+AzFg8AwhAt1Cx/x+ie678fu+iuA/wFHA0ZLRJLyCud5rihDMQdRs8x02a4f+IkrHbboq+02g38iz98Org2S5yexFDHFVCa/GvHf24TEwVuM3dELThnvGcQ2Cc89iO7wJpsSW1B8gL2o6UMIrhuMx52ecglwU8Rm6PXeDrkV0xogdgMfOJTxU9cbvKIcxc+B/3ZZYwTQ20W5IWCr41xv3P8pmzIDDMOkI85XYjnGeD8ErKjxj7gS/MP4lgf099j2Z2Gf3XFK5z76ga0l8y3jfaNDO8NRDgtX4UN89JzwGXB3QoILzl0Ega9clPOqr4wNilnA712U1BCO3gl2kt9R4AMUXwJbbcq1xKXe+/wjlsK6myL4PyzcehYjlj4N+I7HHjYRiir6gcF1NXaMtPmvAolcAjHy7LUp2xPniftN7HWjIETiIRQHkz0wSYYfaOZQ5jjUbcx2BB5HYu+d0B9lY1hTXIy9AWttmESwxqGvUSibuDcD5x+xFKurybpbhXxtQRa2lFeexOldwN+NzxcD+cm+4TqFOPbbEcsCMAwBiqPYewj4cXbnuAFng8s6REeaLCQzhiocbXGWbvZQUxqqWyiOA39wUbIXErBghVvANhx0adjnlYje3AqDEEu8Lc4vYiki3HeNbzvAwpqnCCDcJYje0b2jtVgonyKUVOQOFC8bRqXGiEHYxxCvR9WISV/u0N5AgwDXhij93VhV/894DsmADnGG7iUOExEx0w4rI55PfeB1nHNFtAULh3lZx3aGmROEVD+g2IpYxa2QgQux/3xzHeoDXG98ft0hHnURkqYqB9Fx/tF1L4rPUdyNcK7ZwB1ANxQPOLpbnHsYY/NfkNqc5DuEfFmjoTNCgOdF+a8Zwq3b4QQkdYwzgXEodiBzx45om+nZ3onB1chez6i4HXjYoY3TwMv1PkLiabALUalYwQeWUXTfombym0hsAvZF/LYe+412LIpno+a4CLsgEzrObgbnOm5F3FsqCDmiR4c8TNMg0Q/lyjoXXv9NxKpnWmKvQbisXzYaLlPRBfsdeRewOaLOAWTi2sEqKUJbcAxD3QfuczfWAZoATyPzay7iw2f1mos4d4+OoZ/aRFiRhqIvil8Bf8XalcvEjHrwB7WCG3csKzHczk0NYEUUyWIp2CbV/iZmWj4LhHOWfuAqFLtxH2eZiqSW+sQQXRsuFNmEXFPewd5CZmIBoo/LRhbwhy7qhPe5EcVAxMdsAjKujwBDUcxAVft0nqsYg32UygqLRAWrEQd1KwxDcQGqFnfQFmcfxkNJECvjRVkMdb6Poi/i9qMZr2aIrs/NZvwK8Osk3rObfAm1dZKKXIQJscIpom/GW5CEzpdZ1PMj9GGzxf81OMumCHF4x6jg5rUBSShrp4htKLiRUFjUGy6J+5uEonAmoMjy3KviSyMB8N2E3Dj6AvNRLEDxjWQPTBxwMsYss/h9HXDMpl5LxIcuEjkurumYizKNAd0Rvd0IJAplGCKeuiGULyK69PpxGYoON3lBoxny+mOfR+A9JHKnJmQDdcokdrOd90o4sdSQXSob4YDcvNKR5KjngqHIVAifwUkEN6E4Rsjnsg9wVcy9K/4X8Uf8E6IGAPETewvFozER4mRCwhuvsCnxBdYGtEKcOftooqkb5+lkEoCGjv3AT1H8sAFIgm5oRrTEJk55K9fZGPdWO9TtRsimUQvhYngJIiJ+iftY2EyE7W3Yu7niQoSzBNiM8hS+tpBQZpZbgbVxXEchMBHFa4jxqB8yhtMRF6Wfong/2cPlEmZsvRVWomwjJ1YSeibRMBBFzwidmhsLd32EGp5LqEL0dW8Dcw2dcUOAGw64pruPoiP2+t2zRAaZ1MQWhOu0MhKaVvaoHhvhxLIceNlT/Oy5g1FAK+PzfI91NyFhen2AMSimoKIcoeEFiuUoVgP3IRtUa4RwrmUKP2FqEiyU3q4/G2dXi0UO/y9G8n7mWPyfhehEnwr7zY0u8lxQCUWirvMJfIRiRrJvMgKdXJSJXGdDCK3jaNhiy2woilAsxd6j4kYUrQ2f4BoIJ5Y+RFfUuIilHF5l6tZ2IVZCL/VLUbwEzELcXcbizqnWqd1KYBaKxUbbIxFjyRx+Tiue4dlkD50N+mPvurEH+BhFGtbpzfYiO71dxM5YwxBmcpRuznHqgKJ5Ejf9MuDPiBqiKfbcsJlS7S0X7cYKP/Aoin7AJFQUfV59Q+aFU+o2HVEbhOM2hzprjUgcK5dIHRnrn2E9Ly1d184HP8s8QnkrPwTaGQTULYKIkacSGa/RJIJYmlDsRjEGUMBkNEBnplqvCtUAtSjZg2eBkQ7/N0c4eA1r3VQAyXtoB1NPbJ7eeQgRtexCSDshnENcxyPHgRLghXogStuhmotqiUgmuTblr0eS646M4mVQ38jD+TC0Y0giEIHiUmz0iQa+jUg8VqGLlQgXH7QpA5IU5rwkluMJLdjByATzct9V1OQO+qHoheKjhF2hIgg8juIrNF4gA9/st2c/t2jnorfH9BwTn8ifaMh5N05K9lwcfNZcIh15fibhO4JwpHZiVCbCGSSLWGo4+zcmAn+vIVqLG9EfsTe69QZeRTEAVWenVLrBGHA8uXI7Nd2LbsFZH+0l0bAdRkRzXTsXrNixQ9EcMcqYaI7oPHI8vFoadUwCmx3RZiKvNx+dfNLh8MnDndfsWnNHsocwCgbj7BieSAw1dKQgx0C4ySj+n8azTxbqY13VJBwS0jcE55RsV0IS9Zey2U50UXKNwUSYYvuYerzKFkRRDzVuYimTp7vxeQ7CXn8H+J6H1+0IcZxISGc2sg6zCT1PkDOkwKrCVV6P96wPxJIQOR70whS/ZPFsdlGnC6KXOr8gWXYmYp80AuBeQ/WTDEzFOc9rgJDLHoga7bJ6vs5aDFFjF8PNY27LkNCu+PRIiqHIIF6G7NAb6uCaC4H30eh/ovxE98KTha265nZtGK5ZEt44KAk9jyDk4L4W8VN1EnUfQvEeqsaia/xQbEExE0mFZodfoVjv4N6V6GubiLsD0pZR8ziXkST2LHg36Ifi4nCa0Xg5S1nYQ41vaxOkcH8l7LOnk+E8XHclsAcfBCoCTT/46oMWdTtQnjAG5/yIdYERqOrsOZ9QM/2WFdKQM3dGuChrD+WoX2tomImzuqIncjhY/UBxP/CCi5JB4PmwejnYZ+GvK2QR4dPZmDnLWwnFLScqt+EqJPdfD8StZXrcPpfRUQGgaVpVZkpmMN7GwhB71Ia4ZExwKFWCREdVgHMyVcRwVoJzCFsXJNHrayh0FH9AfGed+mgFLELxBPC0p5hxSQd3FxIv/CgSRucWyY2OEX/CX+C8qUxCsRDlmBw3GqpclVLkIb7E33VVHl5E1Tg3ZyghVZoVthqvLNxxoAGoJsJ2NHAsiqdN3WnjJJYy0c2kGYchQaKYTML5wGNAR+RBzq2DO8ghCOkZ6ad7teuVSBE8yzi2wa1I4zPu+yySleUKh/KrULYJMqJD8X0k+44dxiJ5CECxwoiCciLeINFo04BbUSxEiPlniAuSuRH5kLXQBrgUea5DjM8gz9sttBjG2URFtVEjXiiWoXgZ+yM4fMCzKK5zSFcYDelR7tGHEKx2SP6DYcBA7B3Jw7ETeCjiN6dcskHgwQgC62Z8TP9W6xBmjcuo4irk4LNGSizFbcXMEL0mwccLLEE4DQ1ZrIkllmLFvZwgtE5v/WnHZh1PJbD13yBBB27ULzrizxhAMRzx43PSE7qLua+NVcimZnf41FAU7cKe5eOI/tQpua2JXsbrYSSN237Eug6ywM30bznU5FhP4paLEjRDCH8J7rhrCD2PH5FYlyeF6Pvs/C97I8Yw5bHtuwnpEk2CaZ4b3go8G0BLgR8jmdTNq+9ASJVmhR0YxMzjyFSgWI59voc0hFg3amI5htAE9Bre6ITtSAhkP+SI1VjOFrfDCHx0owoGdx285EOPWeEccFEMdUoRMcjp4LZiYjV4Kb4ykiLbcRGtkew6fzHqfGpwpG/gniiB+G52x1m0M+GVO/QTu79fYt2dFF+gUITrAKPjZygWe8xL0M54JQIlSMLk9RG/DweLrPkhbEDFlOIOJD/B49g9Y50RGVMzniibUnY2ksNIpH6sdrf1kepf8t2ZxpePwfVh7W7bL0OSa4D4XI4P+y8Tl8dqWrR9MRrPUA7tctsVDuk+ZF7MbSUOBxFxyukslzWER1x4xzIXZWq6LUmc713JHJwEwwsH6xb5hM6TskI28BxOJ2vWDfYg8djR1qmTmqUS57RrdtgGDhtEkLycJjn9oHam9Lo8NrS+UmcNIRRG9yp1cxTqEqg+Oe6WsPDJVOAlI09lN08tKm4ElqPTnjKYePXEB4Z3H94QXIZykEnrtMMvj3MzXAGObizXoSKidyRu/w4af5b/2KCoQAwsTkanfsD9xuf6ctOZj5zbXdt3VtU4AsYKe4jHfU9owwqHUr6qYNXNYIrhonXIAO5iKnvBU25FHSESJ4HXmRJGnGoO+deZyp3GZy/hYGlI2rjFTDF2XrtHqRnch45O7Do0e8gZO28jYX+XYGYMkg2hq/F9MIoViJj4PhLrWoJwDymITicHEdm+hxAkPzqg8T/TBk5b7OmatIhX4tDCeNmhFOczwZ3GdA9T+Rd22Yx0miLuHJ9E1J2LYi9ynEMiwizDkUPdZwWqjUQ+Q8VaFHPRqtefFR5B8TfgCFoduhXqbANmGn1Z3f9YnMd9E1Pi3CQ11iGbiRblP9CgqLzo5mWfL1MpgUAglbOAj0x0psfR7WmEyofy5QnZNI+ouAJT3+QdO5Ecc6VGu+G61tDnh+lFCaNJAdLZgJZYhV/EQC5AiKUfIXZrMSMPNCYhi+w241WGWGCPIG41GYhhogvhfos6+4DHeMZjZiSgvLzcX1pa6qMSbxq8xOA9QmcNxY5SlmJFLM0tOY3xTOX5GpsymEd49APuAb6PxuUJuTOdTYRO6gStTvX88uR8aJSTQSV2RNNLMhgIMIUqhmMfPZNDkOeAifgSJAnqyAr1sx+dLWi8gY+XbaWQh8mm1JWngxt/W3uU8h6yNi1d18qLyi/cfXT30JROuZ1OXtTpohNNmjQ5o+t6LLuJjsSp7gLKCyio/iOvQ56OWB5zEILhdb/UEaX3LqDKbDuvQ14xhpXSp/nOmEaQzq06D8rNzK0oKisqLjxR+CJPVmckTzwqWAL803Av6MODtEJxjKncTxVLqWIQMIAAvRDiGP3AMw1IZQc6r5LCHKZSGMvldG/Z/czh9ocPllaV4vf760vl4Uee/YKC+wriHuu8DnnLkYnbFNl4queL3+fXDxYdzDhSdKQtPvKI5vcoDv3PM5U5BBiJzgB0ridAN1czTwf8VJBCATqb0NhICmtQYanhKjiFMAbFJO58cHPdSXKLMgIdczvub9WkVVplsDIy4YVujM/J8LXmiCfZn/fbvIeR/KCVUa9dx+fz+a4rCZR8x6/5P0r3pzfR0b2eZ1RljM0x4ECaP61w74m9HxwvOr6dp93ptPM65PVFaMYhaqsPdITj3Aes8zQG0fAUp/N+m/cqssmWEGm30dADZYGszfs2X5vSqnmr317Q7oK5LTNaVgT1YCzMv7nnlwMnwi++R9seZUhsdYbxgGIhlhlA8cIJCyvC2l0HfAMIHi05Wu0UvuLOFfNmbJ6xeNfRXXrh4cK98Y2iA57kBA8xijJaXNrl0qphPYeVzPz1TJhSfXLkkszHMltMuGpCe7/Pf3FQD3ZDdvVMhLs8kZWata/weOHON7e/+Smzaicb9YIOOR3Wdmnb5eryYDlpvrS6NNSFQ0g97I970gIF9xV8Pm7+uOuRxVBF2HxJT0nXA4FAypGjR1JIdRirKZxC8pb+tdNTnb42Om905+KK4u5Ae8StJRshUFWItHISOJKdlv3lJ4c/2bOmYM0hZlnkzqxkIRKfXkHiiKV5n3Jf5Rxv37T92G5tuqWXVZZZEYvjXse84L6COePmj1uHtSFXO1JyJH36tdPLdx7buXDF7hUZzdObezU6BY2xObtwwsKYMhv1aNtjOxIPXhnlWk1etXjhhIXHvbZt0d90ROoNEPFMNU3TSytL0zIzMgP/DwlSDmJvAVyOAAAAAElFTkSuQmCC" width="331" height="40"/>
+                            </svg>
+                        </a>
+                        <div class="hidden sm:block">
+                            <nav class="relative flex-col items-center justify-end flex-1 mt-12 main-nav sm:flex sm:mt-0 sm:flex-row">
+                                <div class="relative flex flex-col items-center justify-end flex-1 sm:flex-row">
+                                    <a title="Tailwind CSS" href="/" class="py-2 sm-4 sm:py-2 sm:px-4 text-white sm:text-gray-900 opacity-75 hover:opacity-100">Home</a>
+                                    <div class="relative user">
+                                        <a title="Tailwind css components" href="/components" class="block py-2 sm:py-4 sm:px-4 text-white sm:text-gray-900 opacity-75 hover:opacity-100">Components</a>
+                                        <div class="absolute left-0 hidden opacity-0 pointer-events-none sm:block dropdown">
+                                            <div class="flex flex-col bg-white border border-gray-200 rounded shadow-lg">
+                                                <a title="TailwindCSS Buttons" href="/components/Buttons" class="w-full px-6 py-2 text-sm opacity-75 text-gray-900 hover:opacity-100 whitespace-nowrap">Buttons</a>
+                                                <a title="TailwindCSS Forms" href="/components/Forms" class="w-full px-6 py-2 text-sm opacity-75 text-gray-900 hover:opacity-100 whitespace-nowrap">Forms</a>
+                                                <a title="TailwindCSS Navigations" href="/components/Navigations" class="w-full px-6 py-2 text-sm opacity-75 text-gray-900 hover:opacity-100 whitespace-nowrap">Navigations</a>
+                                                <a title="TailwindCSS Cards" href="/components/Cards" class="w-full px-6 py-2 text-sm opacity-75 text-gray-900 hover:opacity-100 whitespace-nowrap">Cards</a>
+                                                <a title="TailwindCSS Widget" href="/components/Widget" class="w-full px-6 py-2 text-sm opacity-75 text-gray-900 hover:opacity-100 whitespace-nowrap">Widget</a>
+                                                <a title="TailwindCSS Tables" href="/components/Tables" class="w-full px-6 py-2 text-sm opacity-75 text-gray-900 hover:opacity-100 whitespace-nowrap">Tables</a>
+                                                <a title="TailwindCSS Pages" href="/components/Pages" class="w-full px-6 py-2 text-sm opacity-75 text-gray-900 hover:opacity-100 whitespace-nowrap">Pages</a>
+                                                <a title="TailwindCSS Alpinejs" href="/components/Alpinejs" class="w-full px-6 py-2 text-sm opacity-75 text-gray-900 hover:opacity-100 whitespace-nowrap">Alpinejs</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a title="Tailwind css premium components" href="/premium" class="py-2 sm:py-4 sm:px-4 text-white sm:text-gray-900 opacity-75 hover:opacity-100">Premium</a>
+                                    <a title="Tailwind components blog" href="/blog" class="py-2 sm:py-4 sm:px-4 text-white sm:text-gray-900 opacity-75 hover:opacity-100">Blog</a>
+                                    <button v-cloak @click="searchOpen = !searchOpen" class="py-2 sm:py-4 sm:px-4 text-white sm:text-gray-900 focus:outline-none hidden lg:block">
+                                        <svg :class="searchOpen ? 'hidden' : ''" class="w-4 h-4 opacity-75 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+                                            <path d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z" fillRule="evenodd"></path>
+                                        </svg>
+                                        <svg v-cloak :class="searchOpen ? '' : 'hidden'" class="w-4 h-3 opacity-75 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 375">
+                                            <defs/>
+                                            <g ill-rule="nonzero">
+                                                <path d="M368.663 339.414L35.873 6.624c-8.076-8.076-21.172-8.076-29.249 0-8.076 8.077-8.076 21.173 0 29.25l332.79 332.79c8.078 8.076 21.172 8.076 29.25 0 8.076-8.078 8.076-21.172 0-29.25z"/>
+                                                <path d="M339.414 6.624L6.624 339.414c-8.076 8.077-8.077 21.172 0 29.25 8.078 8.076 21.173 8.076 29.25 0l332.79-332.79c8.076-8.078 8.076-21.172 0-29.25-8.078-8.077-21.172-8.077-29.25 0z"/>
+                                            </g>
+                                        </svg>
+                                    </button>
+                                    <form v-cloak :class="searchOpen ? '' : 'hidden'" class="absolute right-0 top-0 mt-2 mr-12 w-full " action="/search">
+                                        <input type="search" name="query" class="w-full h-10 p-4 mr-4 text-sm text-gray-600 bg-white border border-gray-300 rounded focus:outline-none focus:border-gray-400 focus:ring-0" placeholder="Press enter to search" />
+                                    </form>
+                                </div>
+                                <div class="flex flex-col items-center mt-2 sm:mt-0 sm:flex-row sm:border-l sm:border-gray-300">
+                                    <a rel="nofollow" title="Submit Tailwind component" class="px-3 py-2 font-bold text-white rounded sm:ml-4 md:px-4 bg-primary hover:bg-teal-300" href="/submit-component">Submit your own</a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <button @click="sidebarOpen = !sidebarOpen" class="sm:hidden absolute right-0 top-0 py-5 px-6 flex nav-toggle z-20 focus:outline-none">
+                    <img alt="tailwind CSS components" src="./svg/menu.svg" class="h-5">
+                    </button>
+                </header>
+                <div class="px-6 py-8 mt-12">
+                    <div class="flex justify-between container mx-auto">
+                        <div class="w-full lg:w-8/12">
+                            <div class="mt-6">
+                                <div class="max-w-4xl px-2 py-6 bg-white rounded-lg shadow-md">
+                                    <div class="flex justify-between items-center"><span class="font-light text-gray-600 mx-3">Jun 1,
+                                            2020</span><a href="#"
+                                            class="px-2 py-1 bg-gray-600 text-gray-100 font-bold rounded hover:bg-gray-500">Laravel</a>
+                                    </div>
+                                    <div class="mt-2"><a href="#" class="text-2xl text-gray-700 font-bold hover:underline mx-3">Build Your New Idea with Laravel Freamwork.</a>
+                                        <p class="mt-2 text-gray-600 mx-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                            Tempora expedita dicta totam aspernatur doloremque. Excepturi iste iusto eos enim
+                                            reprehenderit nisi, accusamus delectus nihil quis facere in modi ratione libero!</p>
+                                        <p class="mt-2 text-gray-600 mx-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iste, minima obcaecati quos nam ipsum! Aliquid animi doloremque facilis, et eius, quibusdam voluptatem minus officia, temporibus blanditiis deleniti consequuntur hic?
+                                        Neque, facere in reprehenderit dolorem ad magni, aut assumenda dolorum cupiditate dicta fugit dignissimos nobis incidunt minus debitis pariatur suscipit deserunt quo quisquam ab? Sunt eveniet veritatis nihil ipsum porro.
+                                        Quis ullam assumenda temporibus dicta, tempora voluptatem laboriosam non, animi culpa esse quas deleniti, vel optio est. Accusamus at necessitatibus unde doloribus non iusto porro, illo officia atque perspiciatis mollitia.
+                                        Sit natus omnis non veniam eos quae, officia magnam dolorem magni exercitationem perspiciatis, maxime facere culpa laudantium fuga delectus ipsum. Facere, numquam eaque amet corporis quaerat aspernatur totam enim placeat.
+                                        Excepturi ipsum incidunt, sapiente similique blanditiis expedita hic ipsa pariatur unde doloribus aperiam. Nobis molestiae quidem, quisquam id tenetur veritatis expedita explicabo blanditiis deserunt rem? Adipisci ipsam inventore cumque repellat.
+                                        Suscipit delectus, quia molestias illo ex libero debitis laudantium eum officiis nobis saepe odio ipsam veritatis ratione iusto fugit ad quas voluptatibus. Repellendus, omnis corrupti impedit aliquam placeat dolorem incidunt.
+                                        Nulla distinctio dolores omnis molestias ratione ipsa a voluptates labore velit vero dicta voluptatum deleniti assumenda cum suscipit ipsam harum fugit saepe, voluptatem cumque ex ad enim commodi quaerat. Ea!
+                                        Deleniti distinctio odit autem consequuntur delectus cumque nulla ad non ut necessitatibus facilis, cupiditate veniam incidunt illo neque nisi id tenetur inventore optio dolore sequi nihil. Optio dicta delectus ab!
+                                        Impedit ratione officia expedita, corporis veritatis aut ullam voluptatibus magni! Alias facilis ex iusto sit unde expedita animi velit eum, sed porro ullam iure molestiae aliquid quibusdam quaerat quod veritatis?
+                                        Sapiente nulla neque debitis saepe nostrum ea maiores sequi architecto impedit tempore ex modi, dicta accusantium, fuga vel! Ut quod eos, non at laboriosam maxime explicabo culpa voluptas quasi eum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores repellendus voluptas quo dolores quidem vero assumenda saepe soluta. Impedit, vitae nemo. Cum vitae vero voluptatem ad modi omnis maxime laudantium!</p>
+                                        <p class="mt-2 text-gray-600 mx-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores repellendus voluptas quo dolores quidem vero assumenda saepe soluta. Impedit, vitae nemo. Cum vitae vero voluptatem ad modi omnis maxime laudantium!</p>
+                                        <p class="mt-2 text-gray-600 mx-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores repellendus voluptas quo dolores quidem vero assumenda saepe soluta. Impedit, vitae nemo. Cum vitae vero voluptatem ad modi omnis maxime laudantium!</p>
+                                        <p class="mt-2 text-gray-600 mx-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores repellendus voluptas quo dolores quidem vero assumenda saepe soluta. Impedit, vitae nemo. Cum vitae vero voluptatem ad modi omnis maxime laudantium!</p>
+                                        <p class="mt-2 text-gray-600 mx-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores repellendus voluptas quo dolores quidem vero assumenda saepe soluta. Impedit, vitae nemo. Cum vitae vero voluptatem ad modi omnis maxime laudantium!</p>
+                                        <p class="mt-2 text-gray-600 mx-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores repellendus voluptas quo dolores quidem vero assumenda saepe soluta. Impedit, vitae nemo. Cum vitae vero voluptatem ad modi omnis maxime laudantium!</p>
+                                    </div>
+                                    <div class="flex justify-between items-center mt-4"><a href="#"
+                                            class="text-blue-500 hover:underline">Read more</a>
+                                        <div><a href="#" class="flex items-center"><img
+                                                    src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=731&amp;q=80"
+                                                    alt="avatar" class="mx-4 w-10 h-10 object-cover rounded-full hidden sm:block">
+                                                <h1 class="text-gray-700 font-bold hover:underline">Alex John</h1>
+                                            </a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8">
+                                <div class="flex">
+                                    <a href="#" class="mx-1 px-3 py-2 bg-white text-gray-500 font-medium rounded-md cursor-not-allowed">
+                                        previous
+                                    </a>
+                                
+                                    <a href="#" class="mx-1 px-3 py-2 bg-white text-gray-700 font-medium hover:bg-blue-500 hover:text-white rounded-md">
+                                        1
+                                    </a>
+                                
+                                    <a href="#" class="mx-1 px-3 py-2 bg-white text-gray-700 font-medium hover:bg-blue-500 hover:text-white rounded-md">
+                                        2
+                                    </a>
+                                
+                                    <a href="#" class="mx-1 px-3 py-2 bg-white text-gray-700 font-medium hover:bg-blue-500 hover:text-white rounded-md">
+                                        3
+                                    </a>
+                                
+                                    <a href="#" class="mx-1 px-3 py-2 bg-white text-gray-700 font-medium hover:bg-blue-500 hover:text-white rounded-md">
+                                        Next
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="-mx-4 w-4/12 hidden lg:block mt-4">
+                            <div class="px-4">
+                                <h1 class="mb-4 text-xl font-bold text-gray-700">Authors</h1>
+                                <div class="flex flex-col bg-white max-w-sm px-6 py-4 mx-auto rounded-lg shadow-md">
+                                    <ul class="-mx-4">
+                                        <li class="flex items-center"><img
+                                                src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=731&amp;q=80"
+                                                alt="avatar" class="w-10 h-10 object-cover rounded-full mx-4">
+                                            <p><a href="#" class="text-gray-700 font-bold mx-1 hover:underline">Alex John</a><span
+                                                    class="text-gray-700 text-sm font-light">Created 23 Posts</span></p>
+                                        </li>
+                                        <li class="flex items-center mt-6"><img
+                                                src="https://images.unsplash.com/photo-1464863979621-258859e62245?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=333&amp;q=80"
+                                                alt="avatar" class="w-10 h-10 object-cover rounded-full mx-4">
+                                            <p><a href="#" class="text-gray-700 font-bold mx-1 hover:underline">Jane Doe</a><span
+                                                    class="text-gray-700 text-sm font-light">Created 52 Posts</span></p>
+                                        </li>
+                                        <li class="flex items-center mt-6"><img
+                                                src="https://images.unsplash.com/photo-1531251445707-1f000e1e87d0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=281&amp;q=80"
+                                                alt="avatar" class="w-10 h-10 object-cover rounded-full mx-4">
+                                            <p><a href="#" class="text-gray-700 font-bold mx-1 hover:underline">Lisa Way</a><span
+                                                    class="text-gray-700 text-sm font-light">Created 73 Posts</span></p>
+                                        </li>
+                                        <li class="flex items-center mt-6"><img
+                                                src="https://images.unsplash.com/photo-1500757810556-5d600d9b737d?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=735&amp;q=80"
+                                                alt="avatar" class="w-10 h-10 object-cover rounded-full mx-4">
+                                            <p><a href="#" class="text-gray-700 font-bold mx-1 hover:underline">Steve Matt</a><span
+                                                    class="text-gray-700 text-sm font-light">Created 245 Posts</span></p>
+                                        </li>
+                                        <li class="flex items-center mt-6"><img
+                                                src="https://images.unsplash.com/photo-1502980426475-b83966705988?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=373&amp;q=80"
+                                                alt="avatar" class="w-10 h-10 object-cover rounded-full mx-4">
+                                            <p><a href="#" class="text-gray-700 font-bold mx-1 hover:underline">Khatab
+                                                    Wedaa</a><span class="text-gray-700 text-sm font-light">Created 332 Posts</span>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-10 px-4">
+                                <h1 class="mb-4 text-xl font-bold text-gray-700">Categories</h1>
+                                <div class="flex flex-col bg-white px-4 py-6 max-w-sm mx-auto rounded-lg shadow-md">
+                                    <ul>
+                                        <li><a href="#" class="text-gray-700 font-bold mx-1 hover:text-gray-600 hover:underline">-
+                                                AWS</a></li>
+                                        <li class="mt-2"><a href="#"
+                                                class="text-gray-700 font-bold mx-1 hover:text-gray-600 hover:underline">-
+                                                Laravel</a></li>
+                                        <li class="mt-2"><a href="#"
+                                                class="text-gray-700 font-bold mx-1 hover:text-gray-600 hover:underline">- Vue</a>
+                                        </li>
+                                        <li class="mt-2"><a href="#"
+                                                class="text-gray-700 font-bold mx-1 hover:text-gray-600 hover:underline">-
+                                                Design</a></li>
+                                        <li class="flex items-center mt-2"><a href="#"
+                                                class="text-gray-700 font-bold mx-1 hover:text-gray-600 hover:underline">-
+                                                Django</a></li>
+                                        <li class="flex items-center mt-2"><a href="#"
+                                                class="text-gray-700 font-bold mx-1 hover:text-gray-600 hover:underline">- PHP</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-10 px-4">
+                                <h1 class="mb-4 text-xl font-bold text-gray-700">Recent Post</h1>
+                                <div class="flex flex-col bg-white px-8 py-6 max-w-sm mx-auto rounded-lg shadow-md">
+                                    <div class="flex justify-center items-center"><a href="#"
+                                            class="px-2 py-1 bg-gray-600 text-sm text-green-100 rounded hover:bg-gray-500">Laravel</a>
+                                    </div>
+                                    <div class="mt-4"><a href="#" class="text-lg text-gray-700 font-medium hover:underline">Build
+                                            Your New Idea with Laravel Freamwork.</a></div>
+                                    <div class="flex justify-between items-center mt-4">
+                                        <div class="flex items-center"><img
+                                                src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=731&amp;q=80"
+                                                alt="avatar" class="w-8 h-8 object-cover rounded-full"><a href="#"
+                                                class="text-gray-700 text-sm mx-3 hover:underline">Alex John</a></div><span
+                                            class="font-light text-sm text-gray-600">Jun 1, 2020</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer bg-gray-900 relative">
+                    <div class="container mx-auto px-6">
+                        <div class="flex flex-col items-center lg:w-1/2 xl:w-1/3 mx-auto pt-8 hidden">
+                            <span class="text-2xl font-bold text-white mb-1">Subscribe</span>
+                            <p class="text-teal-100 text-center">Receive the latest free components and templates</p>
+                            <form action="/newsletters/subscribe" class="flex sm:block mt-6 bg-white p-1 rounded" method="post">
+                                <input type="hidden" name="_token" value="uctkmSpNiwiKY1hoEOGTkhiHEPzyQDSlP4e8CnJH">                <input type="email" name="email" placeholder="Email address" class="py-3 px-3 border-none text-gray-700 w-48 sm:w-64 focus:ring-0 focus:outline-none">
+                                <input type="submit" value="Subscribe" class="bg-primary rounded text-white py-3 px-6 cursor-pointer">
+                            </form>
+                        </div>
+                        <div class="sm:flex sm:mt-16">
+                            <div class="sm:w-1/2 sm:pl-16 mt-8 sm:mt-0 pr-4">
+                                <a title="Tailwind CSS component" href="/">
+                                    <svg class="text-indigo-100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="250" height="32" viewBox="0 0 331 40"><image fill="#fff" xlink:href="data:img/png;base64,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" width="331" height="40"></image></svg>
+                                </a>
+                                <p class="text-white mt-2">A repository for community components using Tailwind CSS</p>
+                                <div class="flex mt-6">
+                                    <a rel="nofollow" title="Tailwind css components" href="https://twitter.com/TwComponents" class="mr-3 flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 512 512" width="16"><path d="m483.738281 0h-455.5c-15.597656.0078125-28.24218725 12.660156-28.238281 28.261719v455.5c.0078125 15.597656 12.660156 28.242187 28.261719 28.238281h455.476562c15.605469.003906 28.257813-12.644531 28.261719-28.25 0-.003906 0-.007812 0-.011719v-455.5c-.007812-15.597656-12.660156-28.24218725-28.261719-28.238281zm0 0" fill="#4267b2"/>
+                                            <path d="m353.5 512v-198h66.75l10-77.5h-76.75v-49.359375c0-22.386719 6.214844-37.640625 38.316406-37.640625h40.683594v-69.128906c-7.078125-.941406-31.363281-3.046875-59.621094-3.046875-59 0-99.378906 36-99.378906 102.140625v57.035156h-66.5v77.5h66.5v198zm0 0" fill="#fff"/></svg>
+                                    <span class="ml-2 text-white hover:underline"> Siga-nos no Facebook</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mt-16 sm:mt-0 sm:w-1/2 sm:pr-16 flex flex-row">
+                                <div class="flex flex-col mr-4">
+                                    <span class="font-bold text-white uppercase mb-2">Categorias</span>
+                                    <ul class="flex-1 text-white">
+                                        <li class="mb-1">
+                                            <a title="Tailwind CSS Dropdowns" href="/components/dropdowns" class="text-teal-100 hover:text-white">Tailwind Dropdowns</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a title="Tailwind CSS Logins" href="/components/logins" class="text-teal-100 hover:text-white">Tailwind Logins</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a title="Tailwind CSS Modals" href="/components/modals" class="text-teal-100 hover:text-white">Tailwind Modals</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a title="Tailwind CSS Tabs" href="/components/tabs" class="text-teal-100 hover:text-white">Tailwind Tabs</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a title="Tailwind CSS Inputs" href="/components/inputs" class="text-teal-100 hover:text-white">Tailwind Inputs</a>
+                                        </li>
+                                        <li class="mb-1">
+                                            <a title="Tailwind CSS Selects" href="/components/selects" class="text-teal-100 hover:text-white">Tailwind Selects</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container mx-auto px-6">
+                        <div class="mt-16 border-t border-teal-800 flex flex-col items-center">
+                            <div class="sm:w-3/3 text-center py-6">
+                                <p class="text-sm text-white mb-2">&copy; 2021 - Elias Lacerda - <a title="Por Fábio Santos" rel="nofollow" href="https://fabiosantos.dev">Por Fábio Santos</a> • <a title="Legal" rel="nofollow" href="/legal">Legal</a> • <a title="Cookies" rel="nofollow" href="/cookies">Cookies</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <style>
+            #carbonads {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+            Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            }
+            #carbonads {
+            display: flex;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index:50;
+            max-width: 330px;
+            background-color: hsl(0, 0%, 98%);
+            box-shadow: 0 1px 4px 1px hsla(0, 0%, 0%, .1);
+            }
+            #carbonads a {
+            color: inherit;
+            text-decoration: none;
+            }
+            #carbonads a:hover {
+            color: inherit;
+            }
+            #carbonads span {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            }
+            #carbonads .carbon-wrap {
+            display: flex;
+            }
+            .carbon-img {
+            display: block;
+            margin: 0;
+            line-height: 1;
+            }
+            .carbon-img img {
+            display: block;
+            }
+            .carbon-text {
+            font-size: 13px;
+            padding: 10px;
+            line-height: 1.5;
+            text-align: left;
+            }
+            .carbon-poweredby {
+            display: block;
+            padding: 8px 10px;
+            background: repeating-linear-gradient(-45deg, transparent, transparent 5px, hsla(0, 0%, 0%, .025) 5px, hsla(0, 0%, 0%, .025) 10px) hsla(203, 11%, 95%, .4);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            font-weight: 600;
+            font-size: 9px;
+            line-height: 1;
+            }
+        </style>
+    </body>
+</html>
